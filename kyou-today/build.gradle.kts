@@ -52,9 +52,3 @@ kotlin {
         implementation(npm("utf-8-validate", Ktor.utl8ValidateVersion))
     }
 }
-
-tasks {
-    getByName<Kotlin2JsCompile>("compileKotlinJs") {
-
-    }
-}
