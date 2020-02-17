@@ -4,6 +4,6 @@ import redux.RAction
 
 data class Login(
     val token: String
-): RAction
+) : RAction
 
-class Logout: RAction
+class Logout : RAction

@@ -8,7 +8,7 @@ import react.RComponent
 import react.RProps
 import react.RState
 
-interface MainProps: RProps {
+interface MainProps : RProps {
     var loggedIn: Boolean
     var token: String?
     var playlists: List<PlaylistResource>
@@ -17,7 +17,7 @@ interface MainProps: RProps {
 
 class Main(props: MainProps) : RComponent<MainProps, RState>(props) {
     override fun RBuilder.render() {
-        if(!props.loggedIn) {
+        if (!props.loggedIn) {
             login()
         }
     }
