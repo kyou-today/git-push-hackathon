@@ -1,7 +1,6 @@
 package dev.kyou.today.yourlist
 
 import dev.kyou.today.yourlist.component.app
-import dev.kyou.today.yourlist.reducer.State
 import dev.kyou.today.yourlist.reducer.combinedReducers
 import react.dom.render
 import react.redux.provider

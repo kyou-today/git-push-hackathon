@@ -30,3 +30,15 @@ object React {
 object Redux {
     val version = "4.0.5"
 }
+
+object Ktor {
+    private const val version = "1.3.0"
+    const val client = "io.ktor:ktor-client-js:$version"
+    const val json = "io.ktor:ktor-client-json-js:$version"
+    const val serializer = "io.ktor:ktor-client-serialization-js:$version"
+
+    const val textEncodingVersion = "0.7.0"
+    const val abortControllerVersion = "3.0.0"
+    const val bufferUtilVersion = "4.0.1"
+    const val utl8ValidateVersion = "5.0.2"
+}

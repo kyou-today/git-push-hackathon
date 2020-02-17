@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
+
 plugins {
     kotlin("js") version "1.3.61"
+    kotlin("plugin.serialization") version "1.3.61"
 }
 
 group = "dev.kyou-today.hackathon"
@@ -18,6 +21,10 @@ dependencies {
     implementation(React.Router.router)
     implementation(React.Redux.redux)
     implementation(React.Helmet.helmet)
+    implementation(Ktor.client)
+    implementation(Ktor.json)
+    implementation(Ktor.serializer)
+
 }
 
 kotlin {
@@ -37,6 +44,17 @@ kotlin {
         implementation(npm("react-redux", React.Redux.version))
         implementation(npm("redux", Redux.version))
         implementation(npm("react-helmet", React.Helmet.version))
+
+        // Ktor関連で自動解決されない依存関係
+        implementation(npm("abort-controller", Ktor.abortControllerVersion))
+        implementation(npm("text-encoding", Ktor.textEncodingVersion))
+        implementation(npm("bufferutil", Ktor.bufferUtilVersion))
+        implementation(npm("utf-8-validate", Ktor.utl8ValidateVersion))
     }
 }
 
+tasks {
+    getByName<Kotlin2JsCompile>("compileKotlinJs") {
+
+    }
+}
