@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
-
 plugins {
     kotlin("js") version "1.3.61"
     kotlin("plugin.serialization") version "1.3.61"
@@ -50,11 +48,5 @@ kotlin {
         implementation(npm("text-encoding", Ktor.textEncodingVersion))
         implementation(npm("bufferutil", Ktor.bufferUtilVersion))
         implementation(npm("utf-8-validate", Ktor.utl8ValidateVersion))
-    }
-}
-
-tasks {
-    getByName<Kotlin2JsCompile>("compileKotlinJs") {
-
     }
 }
